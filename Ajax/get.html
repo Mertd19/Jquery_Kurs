@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>AD</th>
+                <th>SOYAD</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_id">
+
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary" id="ajaxGet">Verileri Listele</button>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#ajaxGet").click(function () {
+                var baseUrl = "http://localhost:3000";
+                var tbody = $("#tbody_id");
+                // $.ajax().done().fail();
+                $.ajax({
+                    method: "GET",
+                    url: baseUrl + "/posts"
+                }).done(function (veriler) {
+                    for (var i = 0; i < 20; i++) {
+                        var trHtml = "";
+                        trHtml += '<tr><td>' + veriler[i].id + '</td><td>' + veriler[i].name +
+                            '</td><td>' + veriler[i].surname + '</td></tr>';
+                        tbody.append(trHtml);
+                    }
+                }).fail(function(){
+                    alert("Listeme yaparken hata oluştu");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

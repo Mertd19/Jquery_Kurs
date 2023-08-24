@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto text-center mt-5">
+
+    <h5>h5</h5>
+    <p class="classJquery">classJquery</p>
+    <p id="idJquery">idJquery</p>
+    <h5>h5-2</h5>
+
+
+    <button>Tıkla</button>
+
+    <script>
+        $(document).ready(function () {                     //Script taglerinin nerde olduğunun önemi yok
+            $('button').click(function () {
+                // $('h5').hide();                          // Tüm h5leri gizliyor.
+                // $('h5:first').hide();                    // İlk h5'i gizliyor.
+                // $('#idJquery').hide();                   // idJquery isimli id'yi gizliyor.
+                // $('.classJquery').hide();                // classJquery isimli id'yi gizliyor.
+                // $('*').hide();                           // Bütün yapıları gizliyor.
+                // $(this).hide();                          // Sadece tıkladığımızı gizliyor.
+                $('h5').css({
+                    "background-color": "blue"
+                });
+                $('.classJquery').css({
+                    "background-color": "red"
+                });
+            });
+        })
+    </script>  
+      
+</body>
+</html>

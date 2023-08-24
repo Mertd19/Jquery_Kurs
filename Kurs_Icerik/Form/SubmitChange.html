@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto mt-5">
+
+    <p id="p">Lorem ipsum dolor sit amet.</p>
+    <form action="">
+        <input type="text" class="form-control" id="adi" name="adi"><br>
+        <button type="submit">Gönder</button>
+    </form><br>
+
+    <select name="change" id="change">
+        <option value="Html">Html</option>
+        <option value="Css">Css</option>
+        <option value="Jquery">Jquery</option>
+        <option value="Js">Js</option>
+    </select>
+
+
+    <script>
+        $(function () {
+            $("form").submit(function () {
+                alert(
+                    "Submit çalıştı (Gönderme işlemi yapılmadan önce çalışmasını istediğimiz herşey burada)"
+                );
+                $("#p").css("color", "red").css("font-size", "25px").fadeOut(1500);
+            });
+            $("#change").change(function () {
+                alert($(this).val() +
+                    " Change çalıştı.. (İnput,TextArea veya Select(Option) taglerinde çalıştırıyoruz)"
+                )
+            });
+        })
+    </script>
+</body>
+
+</html>

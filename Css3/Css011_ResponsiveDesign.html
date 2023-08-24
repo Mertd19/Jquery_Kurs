@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            box-sizing: border-box;
+            background-color: red;
+            float: left;
+            border: 1px solid black;
+            width: 20%;
+            height: 300px;
+        }
+        img{
+            width: 100%;
+        }
+        @media screen and (max-width:1000px) {
+            .media{
+                width: 25%;
+                background-color: transparent;
+            }
+        }
+        @media screen and (max-width:800px) {
+            .media{
+                width: 33%;
+                background-color: black;
+            }
+        }
+        @media (min-width:400px) and (max-width:600px) {
+            .media{
+                display: none;
+            }
+        }
+        @media screen and (max-width:400px) {
+            .media{
+                width: 100%;
+                background-color: chartreuse;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="media"><img src="../Html5/image/kamera.jpg" alt="Resim yok"></div>
+    <div class="media"></div>
+    <div class="media"></div>
+    <div class="media"></div>
+    <div class="media"></div>
+</body>
+</html>

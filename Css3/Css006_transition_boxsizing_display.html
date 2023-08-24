@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ornek {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            margin-left: 5%;
+            margin-top: 10%;
+            /* display: block; => Default değeri */
+            /* display: none; => görünmez oluyor */
+            /* display: inline; => Kullandığı alan kadar yer kaplıyo */
+            display: inline-block; /* 2 özelliği birden kullanmayı sağlıyo */
+            box-shadow: 1px 2px 3px 4px black;
+            color: white;
+            text-align: center;
+            transition: width 1s, height 1s, background 1s ,transform 1s;
+            transition-delay: 0.2s;
+        }
+        .ornek:hover{
+            width: 200px;
+            height: 200px;
+            color: black;
+            /* transform: rotate(90deg); => 90 derece döndürme */
+            background-color: blue;
+        }
+        div.ornek > p{
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ornek"><p>asd</p></div>
+    <div class="ornek"><p>asd</p></div>
+    <div class="ornek"><p>asd</p></div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto mt-5">
+
+    <div class="border border-danger">
+        <ul>
+            <li>İtem</li>
+        </ul>
+        <p>Paragraf</p>
+        <span>Span</span>
+        <p>Paragraf</p>
+        <div id="icDiv" class="bg-dark text-success">
+            <p id="altP">İçerde Paragraf</p>
+            <span>İçerde Span</span>
+        </div>
+        <ul>
+            <li>İtem 2</li>
+            <li>İtem 2</li>
+            <li id="liCss">İtem 2</li>
+            <li>İtem 2</li>
+            <li>İtem 2</li>
+            <p>Paragraf</p>
+        </ul>
+    </div>
+
+
+    <script>
+        $(function () {
+            // $("#altP").parent().css("color","red");     //Yanlızca bir üst parent
+            // $("#altP").parents().css("background-color","blue");    // üst bütün parentlar
+            // $("#icDiv").children().css("color","yellow");  //Çocukları
+            // $("#liCss").siblings().css("color", "blue");  //Kendisi gibi olanlar
+            // $("ul").find("li").css("color","blue");         //Aranan elemanların hepsini
+            // $("div").find("div").find("p").css("color","blue");      //Div>Div>p
+            // $("div").find("p").css("color","blue");      //Div>p
+        })
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <style>
+        .divClass {
+            width: 25%;
+            height: 25%;
+            position: absolute;
+            background-color: blueviolet;
+            float: left;
+        }
+    </style>
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto mt-5 text-center">
+
+    <div class="container">
+        <form action="">
+            <div id="form-group">
+                <span for="adiniz">Adınız</span>
+                <input class="form-control" type="text" name="adi" id="adi">
+                <p id="bosAd">Adınız :</p>
+            </div>
+            <div id="form-group">
+                <span for="soyadiniz">Soyadınız</span>
+                <input class="form-control" type="text" name="soyadi" id="soyadi">
+                <p id="bosSoyad">Soyadınız : </p>
+            </div>
+            <button id="gonder" name="submit" type="submit">Gönder</button>
+        </form>
+    </div>
+
+
+    <script>
+        $("#adi").keyup(function name() {
+            var kontrol = $("#adi").val();
+            kontrol = $.trim(kontrol); //Sağındaki solundaki boşlukları alıyoruz.
+            if (!kontrol) {
+                $("#bosAd").text("Bu alan boş bırakılamaz.");
+            }
+            else{
+                $("#bosAd").text(kontrol);
+            }
+        });
+        $("#soyadi").keyup(function name() {
+            var kontrol = $("#soyadi").val();
+            kontrol = $.trim(kontrol); //Sağındaki solundaki boşlukları alıyoruz.
+            if (!kontrol) {
+                $("#bosSoyad").text("Bu alan boş bırakılamaz.");
+            }else{
+                $("#bosSoyad").text(kontrol);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

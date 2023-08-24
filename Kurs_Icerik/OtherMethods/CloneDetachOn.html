@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto text-center mt-5">
+
+    <p id="clone">Clone yapılıcak.</p>
+    <p id="Clone"></p>
+    <button id="cloneButton" class="btn btn-danger">Clone</button>
+    <button id="detachButton" class="btn btn-danger">Detach</button>
+
+
+    <script>
+        $(function(){
+            $("#cloneButton").click(function () { 
+                $("#clone").clone().appendTo("#Clone");
+             });
+        });
+        $(function(){
+            $("#detachButton").click(function () { 
+                $("#clone").detach();
+             });
+        });
+        $("#clone").on({
+            mouseenter:function (){$(this).css("color","red").css("background-color","yellow").html("<b>Clone yapılacak<b>")},
+            mouseleave:function (){$(this).css("color","black").css("background-color","white").html("Clone Yapılacak")}
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <style>
+        .divClass {
+            width: 25%;
+            height: 25%;
+            position: absolute;
+            background-color: blueviolet;
+            float: left;
+        }
+    </style>
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto mt-5">
+
+    <div class="container">
+        <ul>
+            <li>deneme 0</li>
+            <li>deneme 1</li>
+            <li>deneme 2</li>
+            <li>deneme 3</li>
+            <li>deneme 4</li>
+            <li>deneme 5</li>
+            <li>deneme 6</li>
+            <li>deneme 7</li>
+            <li>deneme 8</li>
+            <li>deneme 9</li>
+            <li>deneme 10</li>
+            <li>deneme 11</li>
+            <li>deneme 12</li>
+            <li>deneme 13</li>
+            <li>deneme 14</li>
+            <li>deneme 15</li>
+            <li>deneme 16</li>
+            <li>deneme 17</li>
+            <li>deneme 18</li>
+            <li>deneme 19</li>
+        </ul>
+    </div>
+    <p id="indexNo">İndex Numarası : </p>
+
+
+    <script>
+        $(document).ready(function(){
+           $("ul li").click(function(){
+            var indisAl = $(this).index();
+            $("#indexNo").text("İndex Numarası : "+indisAl);
+           });
+        });
+    </script>
+
+</body>
+
+</html>

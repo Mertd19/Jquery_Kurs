@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color backgroundcolor border margin padding</title>
+    <style>
+        .kutu {
+            padding: 0 2%;
+            border: 1px solid blue;
+            color: red;
+            background-color: aqua;
+            margin: 0 2%;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            display: inline-block;
+            margin-left: 2%;
+        }
+        #b1{
+            background-color: aqua;
+        }
+        #b2{
+            background-color: gray;
+        }
+        #p1{
+            color: black;
+            background-color: bisque;
+        }
+        #p2{
+            color:red;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>color backgroundcolor border margin padding</h2>
+    <p>Lorem ipsum dolor
+        <span class="kutu">sit amet, consectetur adipisicing elit.</span>
+        <span class="kutu">Facilis, asperiores!</span>
+    </p>
+    <hr>
+    <p style="margin: 4% 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <span class="kutu">Atque, quasi!</span>
+        <span class="kutu">Quaerat, quasi!</span>
+    </p>
+    <hr>
+    <div class="box" id="b1"><p id="p1">1.KUTU</p></div>
+    <div class="box" id="b2"><p id="p2">2.KUTU</p></div><br>
+    <div class="box" id="b1" style="border-radius: 50%;background-image: url(../Html5/image/kamera.jpg);background-size: cover;"></div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        .kutu {
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            margin: 20px;
+            border: 2px solid red;
+            background-color: yellow;
+        }
+    </style>
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="mx-auto">
+
+    <div class="container">
+        <div id="kutu" class="kutu"></div>
+        <button class="btn btn-primary ml-5">Hesapla</button>
+    </div>
+
+
+    <script>
+        $(function () {
+            $("button").click(function () {
+                var hesapla = "";
+
+                hesapla += "Genişlik width : " + $("#kutu").width() + " px <br/><br/>";
+
+                hesapla += "Genişlik innerWidth : " + $("#kutu").innerWidth() + " px <br/><br/>";
+
+                hesapla += "Genişlik outerWidth : " + $("#kutu").outerWidth() + " px <br/><br/>";
+
+                hesapla += "Genişlik outerWidth(true) : " + $("#kutu").outerWidth(true) + " px <br/><br/>";
+
+                $("#kutu").html(hesapla);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

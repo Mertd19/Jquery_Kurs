@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto mt-5">
+
+    <form action="">
+        <div class="form-group">
+            <span for="adiniz">Adınız</span>
+            <input type="text" class="form-control" name="adi" id="adi" placeholder="Adinizi Giriniz">
+        </div>
+    </form>
+
+    <div>
+        <p>Keypress : <span id="span"> </span></p>
+    </div>
+
+    <script>
+        var container = 0;
+        $("#adi").keypress(function () {
+            $("#span").text(container+=1);
+            $("#span").css("color","red");
+         });
+    </script>
+</body>
+
+</html>

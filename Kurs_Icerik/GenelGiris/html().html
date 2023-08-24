@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto text-center mt-5">
+
+    <p id="onceki">Önceki Hali</p>
+    <p id="sonrakihtml">Sonraki Hali</p>
+    <p id="sonrakitext">Sonraki Hali</p>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#sonrakihtml").html("<mark>Text()</mark><b> Değiştirilmiş <span class='bg-danger'>(Sonraki Hali)</span>");
+            $("#sonrakitext").text("<mark>Text()</mark><b> Değiştirilmiş <span class='bg-danger'>(Sonraki Hali)</span>");
+        });
+    </script>
+
+</body>
+</html>

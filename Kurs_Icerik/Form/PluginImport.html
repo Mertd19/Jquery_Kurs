@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Draggable - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        #draggable {
+            width: 250px;
+            height: 250px;
+            padding: 0.5em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#draggable").draggable();
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <!-- https://plugins.jquery.com sitesinden istediğimizi seçip uygularız  -->
+
+    <div id="draggable" class="ui-widget-content">
+        <p>Mesajınızı yazınız.</p>
+        <input type="text" name="" id="" style="position: absolute; top: 200px; margin-left: -8px;width: 259px;height: 70px;"></input>
+        <button type="submit" class="btn" style="position: absolute; left: 188px;top: 200px; width: 78px; height: 76px;">Mesaj Gönder</button>
+    </div>
+
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("p").text($("input").val());
+                $("input").val(" ");
+            })
+        })
+    </script>
+
+</body>
+
+</html>

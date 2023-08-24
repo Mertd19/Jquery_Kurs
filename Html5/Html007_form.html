@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("pass");
+            if(x.type === "password"){
+                x.type = "text";
+            }
+            else{
+                x.type = "password";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="index.html" method="post">
+        Adı : <input type="text" name="adi" id="adi" placeholder="İsminizi Giriniz.." required><br>
+        Password : <input type="password" name="sifre" id="sifre" placeholder="Şifrenizi Giriniz.." required><br>
+        Email : <input type="email" name="email" id="email" placeholder="Email Adresinizi Giriniz.." required><br>
+        <select name="" id="" required>
+            <option value="">Seçiniz</option>
+            <option value="">Seçiniz - 2</option>
+            <option value="">Seçiniz - 3</option>
+        </select> <br>
+        <input type="submit" value="Giriş Yap">
+        <input type="reset" value="Temizle">
+        <hr>
+        <select name="" id="" multiple>
+            <option value="">Seçiniz</option>
+            <option value="">Seçiniz - 2</option>
+            <option value="">Seçiniz - 3</option>
+        </select>
+        <hr>
+        <input type="number" name="" id="" min="15" max="150" step="5" value="75">
+        <hr>
+        <label>Cinsiyet :</label> <br>
+        <input type="radio" name="cinsiyet" value="Erkek">Erkek
+        <input type="radio" name="cinsiyet" value="Kadın">Kadın
+        <hr>
+        <div style="text-align: center;">
+            <form id="login" action="index.html">
+                <h2>Login Form</h2>
+                <label for="email">Email Adresi</label><br>
+                <input type="email" name="email" id="email" placeholder="Email Adresinizi Giriniz.." required><br>
+                <label for="pass">Password</label><br>
+                <input type="password" name="password" id="pass" placeholder="Şifreniz.." required><input type="checkbox" onclick="myFunction()"><br>
+                <input type="checkbox" name="hatirla" id="hatirla">Remember Me
+                <a href="">Forgot password?</a> <br>
+                <input type="submit" value="Login" style="background-color: blue;">
+            </form>
+        </div>
+    </form>
+</body>
+
+</html>

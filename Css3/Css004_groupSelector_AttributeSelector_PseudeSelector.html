@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>groupSelector attributeSelector pseudeSelector</title>
+    <style>
+        p {
+            color: red;
+        }
+
+        div,
+        p {
+            background-color: gray;
+        }
+
+        div>p {
+            color: blue;
+        }
+
+        div~p {
+            color: yellow;
+        }
+
+        div+p {
+            color: black;
+        }
+
+        h3 {
+            color: red;
+        }
+
+        input[type="text"] {
+            background-color: red;
+            color: yellow;
+        }
+
+        input[type="button"] {
+            background-color: blue;
+        }
+
+        a{
+            text-decoration: none;
+            border: 1px solid red;
+            padding: 8px 9px;
+            margin: 0 10px;
+        }
+
+        a[target="_blank"] {
+            font-size: 25px;
+        }
+
+        a:link {
+            color: black;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a:hover {
+            color: red;
+        }
+        a:active{
+            color:yellow;
+        }
+        p::after{
+            content: "Mert Dede";
+        }
+    </style>
+</head>
+
+<body>
+    <h2>groupSelector => * + ~ ></h2>
+    <hr>
+    <div>
+        <p>lorem10</p>
+        <p>lorem10</p>
+    </div>
+    <div>
+        <h5>h5</h5>
+    </div>
+    <p>1.p</p>
+    <p>2.p</p>
+    <p>3.p</p>
+    <h3>1.başlık</h3>
+    <h3>2.başlık</h3>
+    <hr>
+    <h2>attributeSelector => [ ]</h2>
+    <h2>pseudeSelector => Element(::) , Class(:)</h2>
+    <form>
+        <input type="text" name="" id=""><br>
+        <input type="text" name="" id=""><br>
+        <input type="email" name="" id=""><br>
+        <input type="number" name="" id=""><br>
+        <input type="button" value="Deneme"><br><br>
+
+        <a href="" target="_blank">Link</a>
+        <a href="">Visited</a>
+        <a href="">Hover</a>
+        <a href="" target="_blank">Active</a><br>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </form>
+    <hr>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto">
+    <form action="">
+        <div class="form-group">
+            <label for="">ID</label>
+            <input class="form-control" id="postID" type="number" placeholder="ID">
+        </div>
+        <div class="form-group">
+            <label for="">Name</label>
+            <input class="form-control" id="postName" type="text" placeholder="Adınız">
+        </div>
+        <div class="form-group">
+            <label for="">Surname</label>
+            <input class="form-control" id="postSurname" type="text" placeholder="Soyadınız">
+        </div>
+    </form>
+
+    <button class="btn btn-danger" id="ajaxPost">Veri Gönder</button>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#ajaxPost").click(function () {
+                var baseUrl = "http://localhost:3000";
+                var tbody = $("#tbody_id");
+                // $.ajax().done().fail();
+                $.ajax({
+                    method: "POST",
+                    url: baseUrl + "/posts",
+                    data: {
+                        "id": $("#postID").val(),
+                        "name": $("#postName").val(),
+                        "surname": $("#postSurname").val()
+                    }
+                }).done(function (veriler) {
+                    for (var i = 0; i < 20; i++) {
+                        var trHtml = "";
+                        trHtml += '<tr><td>' + veriler[i].id + '</td><td>' + veriler[i].name +
+                            '</td><td>' + veriler[i].surname + '</td></tr>';
+                        tbody.append(trHtml);
+                    }
+                }).fail(function(){
+                    alert("Ekleme yaparken hata oluştu");
+                });
+                $("#postID").val(" ");
+                $("#postName").val(" ");
+                $("#postSurname").val(" ");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto mt-5">
+
+    <ul class="mt-3">
+        <li>Baş</li>
+        <li>Li 1</li>
+        <li>Li 2</li>
+        <li>Son</li>
+    </ul>
+    
+    <button class="btn btn-warning" id="appendEkle">appendEkle</button>
+    <button class="btn btn-warning" id="prependEkle">prependEkle</button>
+    <button class="btn btn-warning" id="afterEkle">afterEkle</button>
+    <button class="btn btn-warning" id="beforeEkle">beforeEkle</button>
+
+    <script>
+        $(document).ready(function () {
+            var appendSayac = 1 , prependSayac = 1 , afterSayac = 1 , beforeSayac = 1;
+            $("#appendEkle").click(function () {
+                $("ul").append("<li> Append "+appendSayac+" </li>");
+                appendSayac++;
+            });
+            $("#prependEkle").click(function () {
+                $("ul").prepend("<li> Prepend "+prependSayac+" </li>");
+                prependSayac++;
+            });
+            $("#afterEkle").click(function () {
+                $("ul").after("<li> After "+afterSayac+" </li>");
+                afterSayac++;
+            });
+            $("#beforeEkle").click(function () {
+                $("ul").before("<li> Before "+beforeSayac+" </li>");
+                beforeSayac++;
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

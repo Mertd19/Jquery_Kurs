@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto text-center mt-5">
+
+    <div class="container">
+        <p id="hideshow">Göstermek - Gizlemek</p>
+        <button class="btn btn-outline-danger" type="submit" id="fadeOut" name="fadeOut"> Fade Out </button>
+        <button class="btn btn-outline-warning" type="submit" id="fadeIn" name="fadeIn"> Fade In </button>
+        <button class="btn btn-outline-secondary" type="submit" id="fadeToggle" name="fadeToggle"> Fade Toggle</button>
+        <button class="btn btn-outline-success" type="submit" id="fadeTo" name="fadeTo"> Fade To </button>
+    </div>
+
+    <script>
+        $(document).ready(function () {  
+            $("#fadeOut").click(function (){
+                $("#hideshow").fadeOut(); //Açık olanı kapatıyor
+            });
+            $("#fadeIn").click(function (){
+                $("#hideshow").fadeIn();  //Kapalı olanı açıyor
+            });
+            $("#fadeToggle").click(function (){
+                $("#hideshow").fadeToggle(); //Açık-kapalı (Düğme mantığı) Kapalı-açık yapıyor
+            });
+            $("#fadeTo").click(function (){
+                $("#hideshow").fadeTo();
+            });
+        })
+    </script>
+
+</body>
+
+</html>

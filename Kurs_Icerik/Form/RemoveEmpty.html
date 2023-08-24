@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        #parent_id{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            background-color: yellow;
+            margin-bottom: 10px;
+        }
+        #ic_div{
+            height: 30px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        
+    </style>
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto mt-5">
+    <!-- 
+    <ul class="mt-3">
+        <li>Baş</li>
+        <li> Li 1
+            <ul>
+                <li>li > ul 1</li>
+                <li>li > ul 2</li>
+                <li>li > ul 3</li>
+                <li>li > ul 4</li>
+                <li>li > ul 5</li>
+            </ul>
+        </li>
+        <li>Li 2</li>
+        <li>Son</li>
+    </ul> -->
+
+    <div id="parent_id">
+        <h4>h4 tagi</h4>
+        <p>p tagi</p>
+        <div id="ic_div">
+            <p>div > paragraf p</p>
+        </div>
+    </div>
+
+    <button class="btn btn-warning" id="emptyBtn">Çocukları Kaldır(Empty)</button>
+    <button class="btn btn-danger" id="removeBtn">Hepsini Kaldır(Remove)</button>
+
+    <script>
+        $(function () { 
+            $("#removeBtn").click(function(){
+                $("#ic_div").remove();
+            });
+            $("#emptyBtn").click(function(){
+                $("#ic_div").empty();
+            });
+         });
+    </script>
+
+</body>
+</html>

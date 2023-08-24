@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto mt-5">
+
+    <div class="container">
+        <ul>
+            <li id="baslangic">Baslangıç</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li id="orta">Orta</li>
+            <li>item 6</li>
+            <li>item 7</li>
+            <li>item 8</li>
+            <li>item 9</li>
+            <li id="bitis">Bitiş</li>
+        </ul>
+    </div>
+
+    <script>
+        $(function () {
+            $("#orta").nextAll().css("color","red").css("background-color","blue");
+            $("#orta").next().css({"color":"blue","background-color":"red","font-size":"20px"});
+            $("#orta").nextUntil("#bitis").css("color","black");
+
+            $("#orta").prevAll().css("color","black").css("background-color","yellow");
+            $("#orta").prev().css("color","yellow").css("background-color","black");
+            $("#orta").prevUntil("#baslangic").css("color","red").css("background-color","black");
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        .divClass{
+            width: 25%;
+            height: 25%;
+            position: absolute;
+            background-color: blueviolet;
+        }
+    </style>
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto text-center mt-5">
+
+    <div class="container">
+        <h1 id="hideshow">Delay</h1>
+        <button class="btn btn-danger">Bana tıkla</button><br>
+        <div class="divClass mt-5" id="deneme"></div><br>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#deneme").slideUp(2000).delay(2000).slideDown(2000);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        div>a {
+            border: 1px solid;
+            text-decoration: none;
+            font-size: 100%;
+            border-radius: 10%;
+            padding: 1% 2%;
+        }
+        #bir{
+            color: #0B5ED7;
+        }
+        #iki{
+            color: #212529;
+        }
+        #uc{
+            color: #157347;
+        }
+        #bir:hover{
+            background: #0B5ED7;
+            color: white;
+        }
+        #iki:hover{
+            background: #212529;
+            color: white;
+        }
+        #uc:hover{
+            background: #157347;
+            color: white;
+            transition: width 3s,height 3s,background 3s; /* 3s */
+        }
+        #kutu1{
+            background-color: red;
+            text-align: center;
+            color: white;
+            text-transform: lowercase;
+            box-sizing: content-box;
+
+            width: 200px;
+            height: 200px;
+
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid red;
+            /* width(200) + padding(10*2) + margin(20*2) + border(1*2) => 262px */
+        }
+        #kutu2{
+            background-color: blue;
+            text-align: center;
+            color: white;
+            text-transform: lowercase;
+            box-sizing: border-box;
+
+            width: 200px;
+            height: 200px;
+
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid blue;
+            /* 200 => width + padding(10*2) + border(1*2) == (width(200) + margin(20*2) => 240)*/
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <a id="bir" href="">Link 1</a>
+        <a id="iki" href="">Link 2</a>
+        <a id="uc" href="">Link 3</a>
+    </div>
+    <br>
+    <hr>
+    <div id="kutu1">Kutu 1</div>
+    <div id="kutu2">Kutu 2</div>
+</body>
+
+</html>

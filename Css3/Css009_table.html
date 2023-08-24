@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background-color: black;
+            color: white;
+            text-align: left;
+            width: 50%;
+            margin: auto;
+            margin-top: 5%;
+            border-collapse: collapse;
+        }
+        th{
+            padding: 0;
+        }
+        table>tbody>tr:hover{
+            background-color: dimgray;
+            cursor: pointer;
+        }
+        thead tr{
+            background-color: blue;
+        }
+        thead tr>th:nth-child(1){
+            background-color: green;
+        }
+        tr>th:first-child{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>Mark</th>
+                <th>Otto</th>
+                <th>@mdo</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>Jacob</th>
+                <th>Thornton</th>
+                <th>@fat</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>Larry the Bird</th>
+                <th></th>
+                <th>@twitter</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

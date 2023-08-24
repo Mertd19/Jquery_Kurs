@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            background-color: red;
+            animation: degisken 8s infinite;
+        }
+
+        .addClassDiv {
+            border: 20px solid yellow;
+        }
+
+        .removeClassDiv {
+            border-radius: 50%;
+        }
+
+        @keyframes degisken {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 600px;
+            }
+        }
+    </style>
+
+
+    <script src="../../Js/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto">
+
+    <h2>AddClass RemoveClass ToggleClass</h2>
+    <div></div>
+
+
+    <script src="Js/class.js"></script>
+</body>
+
+</html>

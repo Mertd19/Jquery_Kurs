@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="js/tutorials.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto text-center mt-5">
+
+  <h1>DATE</h1>
+  <p id="md-tarih">Tarih Alan</p>
+  <p id="md-day">Gün alanı</p>
+  <button onclick="tarihGetir()">Click me | getDate</button>
+  <hr>
+  <p id="screenWidth" class="bg-danger"></p>
+
+
+
+  <script>
+    function tarihGetir() {
+      var tarih = new Date().toLocaleString('tr-TR');
+      var date = new Date();
+      var day = date.getDay();
+      switch (day) {
+        case 1:
+          day = "Pazartesi";
+          break; 
+        case 2:
+          day = "Salı";
+          break; 
+        case 3:
+          day = "Çarşamba";
+          break; 
+        case 4:
+          day = "Perşembe";
+          break;
+        case 5:
+          day = "Cuma";
+          break;
+        case 6:
+          day = "Cumartesi";
+          break;
+        case 0:
+          day = "Pazar";
+        default:
+          break;
+      }
+      document.getElementById("md-tarih").innerHTML = tarih;
+      document.getElementById("md-day").innerHTML = day;
+    }
+    // window.document.getElementById("screenWidth").innerHTML ="Ekran genişliği : "+ window.screen.width; // Screen
+    // window.document.getElementById("screenWidth").innerHTML ="Location host : "+ window.location.host; // Location
+    // window.document.getElementById("screenWidth").innerHTML ="Location hostname : "+ window.location.hostname; // Location
+    // window.document.getElementById("screenWidth").innerHTML ="Navigator userAgent : "+ window.navigator.userAgent; // Navigator
+    
+  </script>
+  
+</body>
+</html>
